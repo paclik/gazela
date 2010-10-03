@@ -1,0 +1,51 @@
+<div class="showRecord">
+	<div style="float: left" >		
+		<% form_for(@place) do |f| %>
+			<%= f.error_messages %>
+		
+			<p>
+				<%= f.label :id %><br />
+				<%= f.text_field :id , :disabled => 'disabled'%>
+			</p>
+			<p>
+				<%= f.label :name %><br />
+				<%= f.text_field :name %>
+			</p>
+			<p>
+				<%= f.label :location %><br />
+				<%= f.text_field :location %>
+			</p>
+			  
+			<p>
+				<%= f.label :address %><br />
+				<%= f.text_field :address %>
+			</p>
+			<p>
+				<%= f.label :invicinity %><br />
+				<%= f.text_field :invicinity %>
+			</p>
+		</div>
+		<div  style="margin-left:400px;">
+			<p>
+				<%= f.label :State %><BR/>
+				<%= f.collection_select :state_id, State.all(:order => :code),  :id, :code,  {:include_blank => false} %>
+					
+			</p>
+			
+			<p>
+				<%= f.label :district %><br />
+				<%= f.text_field :district %>
+			</p>
+
+			<p>
+				<%= f.label :note %><br />
+					
+				<%= f.text_area :note ,"cols" =>50, "rows" => 8%>
+			</p>
+			
+			</div>
+			<p>
+				<%= f.submit 'Update' %>
+			</p>
+<% end %>
+</div>

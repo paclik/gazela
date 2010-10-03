@@ -1,0 +1,5 @@
+<h1>Editing transport</h1>
+<%= render :partial => 'form' %> 
+
+<%= link_to 'Show', @transport %> |
+<%= link_to 'List', transports_path %>

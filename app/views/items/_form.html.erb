@@ -1,0 +1,77 @@
+<div class="showRecord">
+	<div style="float: left" >
+			<% form_for(@item) do |f| %>
+				<%= f.error_messages %>
+			
+				<p>
+					<%= f.label :id %><br />
+					<%= f.text_field :id , :disabled => 'disabled'%>
+				</p>
+				<p>
+					<%= f.label :item_serial_number%><br />
+					<%= f.text_field :itemid %>
+				</p>
+				 <p>
+				 <%= f.label :Item_place %><BR/>	
+				 <%= link_to @item.place.name,  @item.place if @item.place%>
+				
+				
+				</p>
+				<p>
+					<%= f.label :diameter %><br />
+					<%= f.text_field :diameter %>
+				</p>
+		</div>
+		<div  style="margin-left:400px;">	
+				<p>
+					<%= f.label :width %><br />
+					<%= f.text_field :width %>
+				</p>
+				<p>
+					<%= f.label :weight %><br />
+					<%= f.text_field :weight %>
+				</p>
+				<p>
+					<%= f.label :bruttoWeight %><br />
+					<%= f.text_field :bruttoWeight %>
+				</p>
+				<p>
+					<%= f.label :note %><br />
+						<%= f.text_area :note ,"cols" =>50, "rows" => 2 %>
+				</p>
+				
+				
+				
+		</div>
+		  <p>
+		  <%	if not @item.transports.empty? then %>
+				<b>Transports:</b>
+					<%	@item.transports.each do |tr|%>
+						<%= link_to tr.senderRequest, tr  %> <%= link_to "Remove",{:controller => "items", :action => "unlink", :id => @item, :transport => tr }  %> 
+					<% end %>
+				</p>
+				<% 	end  %>	 
+					 
+			<%	if  not @transports.empty? %>
+					<p>
+							<b>load on Wagon with reg. number </b><br />
+							<%= text_field "",:wagon_vrn,  :size => 20%>
+						</p> 
+					<p>
+		
+					<b>and link this Item to transport</b><br />
+					<%= collection_select "" ,:transport, @transports , :id, :senderRequest,{:include_blank => true}  %> 
+			<%	else %>
+					<b> There is not any open transport from that place. </b>
+			<% 	end  %>
+			 
+					
+				</p>
+		
+		
+		<p>
+				<%= f.submit 'Save' %>
+		</p>
+  	<% end %>
+</div>
+

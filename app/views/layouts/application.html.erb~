@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Application: Gazela</title>
+  <%= stylesheet_link_tag 'scaffold' %>
+   <%= stylesheet_link_tag 'order' %>
+   <%= stylesheet_link_tag 'menu' %>	
+</head>
+<body>
+
+<div id="main_content" >
+	<div class="example">
+		<div class="header" >
+			<div id="title" >  
+				<%= @title %>  <div class ='subtitle'><%= link_to " Gazela",{:controller => "items", :action => "index"} %> </div>
+    <div class='sub'>
+        by  Zdeny
+    </div>
+			</div>	
+			<div id="user_nav" >   
+		          
+			</div>  
+			<p style="color: white"><%= flash[:notice] %></p>
+		</div>
+		<div class="example_content" id="example_3">
+			<div id="top_navigation">
+				 <%= render_navigation(:level => 1)  %>
+			</div>
+			<div class="clear_float"></div>
+			<div class="content_wrapper">
+				<div id="sub_navigation">
+					 <%= render_navigation(:level => 2..3)  %>
+				</div>
+					<div class="clear_float"></div>
+				<div class="content"><%= yield %></div>
+				<div class="clear_float"></div>
+			</div>
+		</div>
+		<div class="clear_float"></div>
+		<div class='footer'>
+			<div class='src_code'>
+				Source Code:
+				
+			</div>
+			<div class='styling'>
+				Style:
+			</div>
+			<div class='clear_float'></div>
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+<h1>Editing place</h1>
+<%= render :partial => 'form' %>  
+
+<%= link_to 'Show', @place %> |
+<%= link_to 'Back', places_path %>

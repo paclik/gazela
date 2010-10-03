@@ -1,0 +1,61 @@
+<div class="showRecord">
+	<div style="float: left" >
+		<% form_for(@transport) do |f| %>
+			<%= f.error_messages %>
+		
+			<p>
+				<%= f.label :id %><br />
+				<%= f.text_field :id,  :disabled => 'disabled' %>
+			</p>
+			<p>                                           
+				<%= f.label :senderRequest %><br />
+				<%= f.text_field :senderRequest %>
+			</p>
+			<p>
+			 <%= f.label :Loading_place %><BR/>	
+			 <%= f.collection_select :loadPlace_id, Place.all(:order => :name),  :id, :name,  {:include_blank => true} %>  
+			
+			</p>
+			<p>
+				<%= f.label :Unloading_place %><BR/>	
+			 <%= f.collection_select :unLoadPlace_id, Place.all(:order => :name),  :id, :name,  {:include_blank => true} %>  
+			
+			</p>
+			<p>
+				<%= f.label :vrn %><br />
+				<%= f.text_field :vrn %>
+			</p>
+			
+		</div>
+		<div  style="margin-left:400px;">
+			<p>
+				<%= f.label :Plan_loadTime %><br />
+				<%= f.datetime_select :loadTime %>
+			</p>
+			<p>
+				<%= f.label :effective_Load_Time %><br />
+				<%= f.datetime_select :effectiveLoadTime ,:include_blank => true %>
+			</p>
+			<p>
+				<%= f.label :Plan_UnLoadTime %><br />
+				<%= f.datetime_select :UnLoadTime %>
+			</p>
+			<p>
+				<%= f.label :effective_Un_Load_Time %><br />
+				<%= f.datetime_select :efectiveUnLoadTime ,:include_blank => true  %>
+			</p>
+		 <p>
+				<%= f.label :note %><br />
+				<%= f.text_area :note ,"cols" =>50, "rows" => 2 %>
+			</p>
+		 
+			
+		
+		</div>
+		<p>
+				<%= f.submit 'Save' %>
+		</p>
+  	<% end %>
+</div>
+
+

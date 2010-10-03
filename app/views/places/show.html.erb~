@@ -1,0 +1,44 @@
+<h1>Place info</h1>
+<div class="showRecord">
+<p>
+  <b>Id:</b>
+  <%=h @place.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @place.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=link_to "Google map", "http://maps.google.com/maps?&q="+@place.location %>
+ 
+</p>
+<p>
+  <b>Address:</b>
+  <%=h @place.address %>
+</p>
+<p>
+  <b>Invicinity:</b>
+  <%=h @place.invicinity %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @place.state.code if @place.state  %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%=h @place.district %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @place.note %>
+</p>
+</div>
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'List', places_path %>

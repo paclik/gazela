@@ -1,0 +1,32 @@
+<h1>Editing wagon</h1>
+<div class="showRecord">
+<% form_for(@wagon) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id, :disabled => 'disabled' %>
+  </p>
+  <p>
+    <%= f.label :vrn %><br />
+    <%= f.text_field :vrn %>
+  </p>
+  <p>
+    <%= f.label :wag_type %><br />
+    <%= f.text_field :wag_type %>
+  </p>
+  <p>
+    <%= f.label :item_serial_number %><br />
+    <b> <%=h "#{@wagon.item_id}" + "/" + @wagon.item.itemid.to_s %></b>
+  </p>
+  <p>
+    <%= f.label :transport_sender_request %><br />
+     <b><%=h "#{@wagon.transport_id}" + "/" + "#{@wagon.transport.senderRequest}"if @wagon.transport %></b>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+</div>
+<%= link_to 'Show', @wagon %> |
+<%= link_to 'List', wagons_path %>

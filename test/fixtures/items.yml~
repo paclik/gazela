@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  itemid: MyString
+  diameter: 1.5
+  width: 1.5
+  weight: 1
+  note: MyText
+
+two:
+  id: 1
+  itemid: MyString
+  diameter: 1.5
+  width: 1.5
+  weight: 1
+  note: MyText

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: MyString
+  location: MyString
+  invicinity: MyString
+  state_id: 1
+  district: MyString
+  note: MyText
+  issued_who: MyString
+  change_who: MyString
+
+two:
+  id: 1
+  name: MyString
+  location: MyString
+  invicinity: MyString
+  state_id: 1
+  district: MyString
+  note: MyText
+  issued_who: MyString
+  change_who: MyString

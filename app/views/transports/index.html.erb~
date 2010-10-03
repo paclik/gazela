@@ -1,0 +1,42 @@
+<h1>Listing transports</h1>
+<div class="showRecord">
+
+	
+	<%= will_paginate @transports , :previous_label=> "Předchozí", :next_label=> "Další"%> 
+	<table  id="customers">
+		<tr>
+			<th>Id</th>
+			<th>Senderrequest</th>
+			<th>Loadplace</th>
+			<th>Unloadplace</th>
+			<th>Vrn</th>
+			<th>Loadtime</th>
+			<th>Unloadtime</th>
+			<th>Eff.loadT</th>
+			<th>Eff.unlT</th>
+			<th>Note</th>
+				
+		</tr>
+	
+	<% @transports.each do |transport| %>
+	 <% if  @highlight == "alt" then @highlight = '' else  @highlight = 'alt' end  %> 
+	 <tr class = '<%= @highlight%>' >
+			<td><%=link_to  transport.id, transport  %></td>
+			<td><%=h transport.senderRequest %></td>
+			<td><%=h transport.loadPlace.name if transport.loadPlace%></td>
+			<td><%=h transport.unLoadPlace.name if transport.unLoadPlace%></td>
+			<td><%=h transport.vrn %></td>
+			<td><%=h transport.loadTime.localtime.strftime("%d-%m-%y|") %></td>
+			<td><%=h transport.UnLoadTime.localtime.strftime("%d-%m-%y|%H.%M") %></td>
+			<td><%=h transport.effectiveLoadTime.localtime.strftime("%d-%m-%y|") if transport.effectiveLoadTime %></td>
+			<td><%=h transport.efectiveUnLoadTime.localtime.strftime("%d-%m-%y|") if transport.efectiveUnLoadTime %></td>
+			<td><%=h "note" if transport.note and transport.note != "" %></td>
+		 
+		</tr>
+	<% end %>
+	</table>
+	<%= will_paginate @transports , :previous_label=> "Předchozí", :next_label=> "Další"%> 
+	<br />
+	
+	<%= link_to 'New transport', new_transport_path %>
+</div>

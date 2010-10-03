@@ -1,0 +1,2 @@
+class Transpin < ActiveRecord::Base
+end

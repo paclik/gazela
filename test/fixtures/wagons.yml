@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  vrn: MyString
+  wag_type: MyString
+  item_id: 1
+  transport_id: 1
+
+two:
+  id: 1
+  vrn: MyString
+  wag_type: MyString
+  item_id: 1
+  transport_id: 1

@@ -1,0 +1,28 @@
+<h1>Listing wagons</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Vrn</th>
+    <th>Wag type</th>
+    <th>Item</th>
+    <th>Transport</th>
+  </tr>
+
+<% @wagons.each do |wagon| %>
+  <tr>
+    <td><%=h wagon.id %></td>
+    <td><%=h wagon.vrn %></td>
+    <td><%=h wagon.wag_type %></td>
+    <td><%=h wagon.item_id %></td>
+    <td><%=h wagon.transport_id %></td>
+    <td><%= link_to 'Show', wagon %></td>
+    <td><%= link_to 'Edit', edit_wagon_path(wagon) %></td>
+    <td><%= link_to 'Destroy', wagon, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New wagon', new_wagon_path %>

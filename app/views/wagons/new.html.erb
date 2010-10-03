@@ -1,0 +1,30 @@
+<h1>New wagon</h1>
+
+<% form_for(@wagon) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :vrn %><br />
+    <%= f.text_field :vrn %>
+  </p>
+  <p>
+    <%= f.label :wag_type %><br />
+    <%= f.text_field :wag_type %>
+  </p>
+  <p>
+    <%= f.label :item_id %><br />
+    <%= f.text_field :item_id %>
+  </p>
+  <p>
+    <%= f.label :transport_id %><br />
+    <%= f.text_field :transport_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+

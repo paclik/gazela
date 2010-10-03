@@ -1,0 +1,36 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+
+one:
+  id: 1001
+  name: Turecko Railway Station
+  location: MyString
+  invicinity: Brandov
+  state_id: 1
+  district: 2345678
+  note: MyText
+  issued_who: MyString
+  change_who: MyString
+
+
+two:
+  id: 1002
+  name: Brandov Railway Station
+  location: MyString
+  invicinity: Brandov
+  state_id: 1
+  district: 41156
+  note: MyText
+  issued_who: MyString
+  change_who: MyString
+
+three:
+  id: 1003
+  name: Brandov Depot1
+  location: Brandov
+  invicinity: MyString
+  state_id: 1
+  district: MyString
+  note: MyText
+  issued_who: MyString
+  change_who: MyString

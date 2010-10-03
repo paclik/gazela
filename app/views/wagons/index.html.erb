@@ -1,0 +1,27 @@
+<h1>Listing wagons</h1>
+<div class="showRecord">
+<%= will_paginate @wagons , :previous_label=> "Předchozí", :next_label=> "Další"%> 
+<table id="customers">
+  <tr>
+    <th>Id</th>
+    <th>Wagon_number</th>
+    <th>Wag type</th>
+    <th>Item</th>
+    <th>Transport</th>
+  </tr>
+
+<% @wagons.each do |wagon| %>
+  <tr>
+    <td><%= link_to  wagon.id , wagon%></td>
+    <td><%=h wagon.vrn %></td>
+    <td><%=h wagon.wag_type %></td>
+    <td><%=link_to "#{wagon.item_id}" + "/" + wagon.item.itemid.to_s , item_path( wagon.item_id) %></td>
+    <td><%=link_to "#{wagon.transport_id}" + "/" + "#{wagon.transport.senderRequest}", transport_path(  wagon.transport_id) %></td>
+      
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @wagons , :previous_label=> "Předchozí", :next_label=> "Další"%> 
+<br />
+</div>	
+

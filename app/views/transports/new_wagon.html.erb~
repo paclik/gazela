@@ -1,0 +1,78 @@
+<p>
+  <b>Id:</b>
+  <%=h @transport.id %>
+</p>
+
+<p>
+  <b>Senderrequest:</b>
+  <%=h @transport.senderRequest %>
+</p>
+
+<p>
+  <b>Loadplace:</b>
+  <%= link_to @transport.loadPlace.name,  @transport.loadPlace  if @transport.loadPlace %>
+</p>
+
+<p>
+  <b>Unloadplace:</b>
+  <%= link_to @transport.unLoadPlace.name,  @transport.unLoadPlace  if @transport.unLoadPlace %>
+</p>
+<p>
+  <b>Vrn:</b>
+  <%=h @transport.vrn %>
+</p>
+
+<p>
+  <b>Load time:</b>
+  <%=h @transport.loadTime %>
+  <b>Effective Load time:</b>
+  <%=h @transport.effectiveLoadTime %>
+</p>
+
+<p>
+  <b>Unload time:</b>
+  <%=h @transport.UnLoadTime %>
+  <b>Effective Unload time:</b>
+  <%=h @transport.efectiveUnLoadTime %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @transport.note %>
+</p>
+
+<% form_for(@transport) do |f| %>
+<p>
+  <b>Folloving material append to wagon with registration number:</b>
+  <%= text_field "", :wagon_vrn, :size => 8  %>
+  <b></b>
+
+</p>
+
+<p>
+  <b>Pieces:</b>
+  <%= text_field "", :pieces, :size => 8  %>
+  <b>of material name:</b>
+  <%= text_field "", :itemid, :size => 8  %>
+  <b>and every piece has these parametres:</b>
+
+</p>
+ <p>
+  <b>Brutto weight [kg]:</b>
+  <%= text_field "", :bruttoWeight, :size => 8  %>
+  <b>Netto weight [kg]:</b>
+  <%= text_field "", :nettoWeight, :size => 8  %>
+  <b>Material width[mm]:</b>
+  <%= text_field "", :width, :size => 8  %>
+  <b>Diameter[mm]:</b>
+  <%= text_field "", :diameter, :size => 8  %>
+  
+</p> 
+ 
+
+ <br/>
+ <%= f.submit 'Create' %>
+<% end %>
+
+<%= link_to 'Edit', edit_transport_path(@transport) %> |
+<%= link_to 'List', transports_path %>

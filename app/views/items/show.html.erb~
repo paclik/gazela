@@ -1,0 +1,51 @@
+<p>
+  <b>Id:</b>
+  <%=h @item.id %>
+</p>
+
+<p>
+  <b>Item Serial Number:</b>
+  <%=h @item.itemid %>
+</p>
+<p>
+  <b>Place:</b>
+  
+   <%= link_to @item.place.name,  @item.place if @item.place%><b> since:</b>
+    <%=h @item.placeSince%>
+</p>
+
+
+<p>
+  <b>Diameter:</b>
+  <%=h @item.diameter %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%=h @item.width %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%=h @item.weight %>
+</p>
+<p>
+    <b>Weight:</b>
+     <%=h @item.bruttoWeight %>
+  </p>
+<p>
+  <b>Note:</b>
+  <%=h @item.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'List', items_path %>
+
+
+<% if not  @item.transports.empty? then%> 
+	<%= render :partial => 'transports' %> 
+<% else %>
+		<br/> <br/>
+		<b>This item is not conected to any transport </b>
+<% end %>

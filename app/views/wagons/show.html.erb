@@ -1,0 +1,30 @@
+<div class="showRecord">
+<p>
+  <b>Id:</b>
+  <%=h @wagon.id %>
+</p>
+
+<p>
+  <b>Vrn:</b>
+  <%=h @wagon.vrn %>
+</p>
+
+<p>
+  <b>Wag type:</b>
+  <%=h @wagon.wag_type %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%=h "#{@wagon.item_id}" + "/" + @wagon.item.itemid.to_s %>
+</p>
+
+<p>
+  <b>Transport:</b>
+  <%=h "#{@wagon.transport_id}" + "/" + "#{@wagon.transport.senderRequest}"if @wagon.transport %>
+</p>
+
+
+
+</div>
+<%= link_to 'Edit', edit_wagon_path(@wagon) %> |

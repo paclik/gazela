@@ -1,0 +1,34 @@
+<h3>Listing items</h3>
+	
+<table  id="customers">
+  <tr>
+    <th>Id</th>
+    <th>ItemSN</th>
+    <th>Place</th>
+    <th>Wagon</th>
+    <th>NttWeight</th>
+    <th>BrtWeight</th>
+    <th>MatWidth</th>
+    
+    <th>Note</th>
+  </tr>
+<% @transport.items.each do |item| %>
+ 				<% if  @highlight == "alt" then @highlight = '' else  @highlight = 'alt' end  %>
+ 				
+ 				<tr class = '<%= @highlight%>'>
+				<td><%= link_to item.id, item  %></td>
+				<td><%=h item.itemid %></td>
+				<td><%= link_to item.place.name, :controller => "items", :place_id => item.place_id  if item.place_id %></td>
+				<td><%=h item.wagons.find_by_transport_id(@transport).vrn %></td> 
+				<td><%=h item.weight	 %>  </td>
+				<td><%=h item.bruttoWeight	 %>  </td>
+				<td><%=h item.width	 %>  </td>
+	  		<td><%=h "note" if item.note and item.note != "" %></td>
+				
+						
+			</tr>
+<% end %>
+
+</table>
+	
+<br />

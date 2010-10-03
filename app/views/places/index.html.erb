@@ -1,0 +1,35 @@
+<h1>Listing places</h1>
+
+<div class="showRecord">
+<%= will_paginate @places , :previous_label=> "Předchozí", :next_label=> "Další"%> 
+	<table id="customers">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Invicinity</th>
+    <th>State</th>
+    <th>District</th>
+    <th>Note</th>
+    
+  </tr>
+
+<% @places.each do |place| %>
+ <% if  @highlight == "alt" then @highlight = '' else  @highlight = 'alt' end  %>
+					
+		<tr class = '<%= @highlight%>'>
+    <td><%= link_to place.id , place %></td>
+    <td><%=h place.name %></td>
+    <td><%=h place.location %></td>
+    <td><%=h place.invicinity %></td>
+    <td><%=h place.state.code if place.state %></td>
+    <td><%=h place.district %></td>
+    <td><%=h place.note %></td>
+   
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @places , :previous_label=> "Předchozí", :next_label=> "Další"%> 
+<br />
+</div>	
+<%= link_to 'New place', new_place_path %>

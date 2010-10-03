@@ -1,0 +1,32 @@
+
+<h3> Listing transports of <%=h@item.itemid %> </h3> 
+<table id="customers">
+  <tr>
+    <th>TrId</th>
+    <th>Train</th>
+    <th>Wagon</th>
+    <th>Load place</th>
+    <th>Unload place</th>
+    <th>EffLoadT</th>
+    <th>EffUnlT</th>
+    <th>Note</th>
+  </tr>
+
+<% @item.transports.each do |transport|  %>
+		 	<% if  @highlight == "alt" then @highlight = '' else  @highlight = 'alt' end  %>
+ 				
+ 				<tr class = '<%= @highlight%>'>
+				<td><%= link_to @item.transports.find(transport).id, :controller => "transports", :action => transport.id %>  </td>
+				<td><%=h @item.transports.find(transport).senderRequest  if @item.transports.find(transport) %></td>
+				<td><%=h @item.wagons.find_by_transport_id(transport).vrn %></td> 
+				<td><%=h @item.transports.find(transport).loadPlace.name   if @item.transports.find(transport).unLoadPlace %></td>
+				<td><%=h @item.transports.find(transport).unLoadPlace.name   if @item.transports.find(transport).unLoadPlace %></td>
+				<td><%=h @item.transports.find(transport).effectiveLoadTime.localtime.strftime("%d-%m-%y|%H")   if @item.transports.find(transport).effectiveLoadTime %></td>
+				<td><%=h @item.transports.find(transport).efectiveUnLoadTime.localtime.strftime("%d-%m-%y|%H")   if @item.transports.find(transport).efectiveUnLoadTime %></td>
+				<td><%=h "note" if @item.note and @item.note != "" %></td>
+				
+					
+			</tr>
+<% end %>
+
+</table>
