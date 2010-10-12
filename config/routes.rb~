@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :wagons
+
   map.resources :places
 
   map.resources :items
@@ -37,6 +39,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
+  map.new_wagon "/new_wagon/", :controller => "transports", :action => "new_wagon"
   map.root :controller => "items", :action => 'index', :par_date => Date.today.strftime("%d.%m.%Y") 
 
   # See how all your routes lay out with "rake routes"

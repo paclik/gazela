@@ -2,7 +2,7 @@ class Item < ActiveRecord::Base
 	has_many :wagons ,:dependent => :destroy
 	has_many :transports, :through => :wagons , :uniq => true, :before_add => :check_before_add, :before_remove => :check_before_remove
   belongs_to :place
-  
+ 
   ######### pagination promenne	
   cattr_reader :per_page
   @@per_page = 20

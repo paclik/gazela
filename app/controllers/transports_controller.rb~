@@ -1,5 +1,7 @@
 class TransportsController < ApplicationController
  
+	#navigation :transports
+	
 	def new_wagon
   		@transport = Transport.find(params[:id])
   		

@@ -1,15 +1,15 @@
-set :application, "amelem"
+set :application, "totalplan"
 #set :repository, "cesta_k_vasemu_repositari"
 #set :repository, "ssh://totalplan@server3.railshosting.cz/usr/home/totalplan/git/totalplan.git"
-set :repository, "git://github.com/paclik/gazela.git" 
+set :repository, "git://github.com/paclik/totalplan.git" 
 set :scm, "git"
 
 role :web, "server3.railshosting.cz"
 role :app, "server3.railshosting.cz"
 role :db,  "server3.railshosting.cz", :primary => true
 
-set :deploy_to, "/home/amelem/app/"
-set :user, "amelem"
+set :deploy_to, "/home/totalplan/app/"
+set :user, "totalplan"
 
 set :use_sudo, false
 

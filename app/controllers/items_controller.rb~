@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
+
+  
+  #navigation :items
   
   def unlink
   	@item = Item.find(params[:id])
@@ -11,7 +14,6 @@ class ItemsController < ApplicationController
    		flash[:notice] = e.message 
   	end	
   	redirect_to :action => 'edit'
-
   end
   
   

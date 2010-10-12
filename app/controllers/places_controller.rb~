@@ -1,5 +1,7 @@
 class PlacesController < ApplicationController
-  # GET /places
+  
+	#navigation :places
+	# GET /places
   # GET /places.xml
   def index
     #@places = Place.all

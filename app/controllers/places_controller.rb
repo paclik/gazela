@@ -1,8 +1,11 @@
 class PlacesController < ApplicationController
   
-	navigation :places
+	#navigation :places
 	# GET /places
   # GET /places.xml
+  before_filter :require_admin, :only => [:new,  :edit, :update,  :destroy, :create]
+  before_filter :require_user, :only => [ :show, :index]
+  
   def index
     #@places = Place.all
     @places =  Place.paginate :page => params[:page], :order => 'id DESC'

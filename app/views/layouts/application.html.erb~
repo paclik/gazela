@@ -15,13 +15,14 @@
 	<div class="example">
 		<div class="header" >
 			<div id="title" >  
-				<%= @title %>  <div class ='subtitle'><%= link_to " Gazela",{:controller => "items", :action => "index"} %> </div>
-    <div class='sub'>
-        by  Zdeny
-    </div>
+				<%= @title %><%= link_to " Gazela",{:controller => "items", :action => "index"} %>  <div class ='subtitle'></div>
+    <div class='sub' align ="center">
+        by zdenek.paclik@seznam.cz
+     </br></br>
+      </div>
 			</div>	
 			<div id="user_nav" >   
-		          
+		    
 			</div>  
 			<p style="color: white"><%= flash[:notice] %></p>
 		</div>

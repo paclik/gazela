@@ -27,7 +27,7 @@ class CreateStates < ActiveRecord::Migration
        (18,'GEO','Georgia (Gruzie)',0,'GEO'),
        (19,'GIB','Gibraltar',0,'GIB'),
        (20,'GRC','Greece',0,'GR'),
-       (21,'GRL','Greenland (Grónsko)',0,'GRL'),
+       (21,'GRL','Greenland (Gronsko)',0,'GRL'),
        (22,'HRV','Croatia',0,'HR'),
        (23,'HUN','Hungary',0,'H'),
        (24,'IRL','Ireland',0,'IRL'),
@@ -38,7 +38,7 @@ class CreateStates < ActiveRecord::Migration
        (29,'LTU','Lithuania (Litva)',0,'LT'),
        (30,'LUX','Luxembourg',0,'LUX');"
         
-       execute "INSERT INTO states(id,code,name,block,code_nov) VALUES  (31,'LVA','Latvia (Lotyšsko)',0,'LOT'),
+       execute "INSERT INTO states(id,code,name,block,code_nov) VALUES  (31,'LVA','Latvia (Lotyssko)',0,'LOT'),
        (32,'MCO','Monaco',0,'MCO'),
        (33,'MDA','Moldova, Republic of',0,'MDA'),
        (34,'MKD','Macedonia, FYROM',0,'MAC'),

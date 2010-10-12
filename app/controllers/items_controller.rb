@@ -1,8 +1,11 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
+
+  before_filter :require_admin, :only => [:new,  :edit, :update,  :destroy, :create]
+  before_filter :require_user, :only => [ :show, :index]
   
-  navigation :items
+  #navigation :items
   
   def unlink
   	@item = Item.find(params[:id])

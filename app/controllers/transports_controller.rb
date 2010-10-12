@@ -1,7 +1,10 @@
 class TransportsController < ApplicationController
  
-	navigation :transports
+	#navigation :transports
 	
+	before_filter :require_admin, :only => [:new,  :edit, :update,  :destroy, :create]
+  before_filter :require_user, :only => [ :show, :index]
+  
 	def new_wagon
   		@transport = Transport.find(params[:id])
   		

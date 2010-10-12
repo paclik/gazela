@@ -1,6 +1,9 @@
 class WagonsController < ApplicationController
 	
-	navigation :wagons
+  before_filter :require_admin, :only => [:new,  :edit, :update,  :destroy, :create]
+  before_filter :require_user, :only => [ :show, :index]
+	
+	#navigation :wagons
   # GET /wagons
   # GET /wagons.xml
   def index
