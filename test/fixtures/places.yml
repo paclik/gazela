@@ -1,36 +1,25 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 
-one:
+one: 
   id: 1001
-  name: Turecko Railway Station
-  location: MyString
-  invicinity: Brandov
-  state_id: 1
-  district: 2345678
-  note: MyText
-  issued_who: MyString
-  change_who: MyString
-
-
-two:
+  name: Pastuchovice-Pohvizdy
+  location: +50° 3' 28.24", +13° 22' 46.20"
+  invicinity: Pastuchovice
+  state_id: 10
+  district: 
+  note: "787 pcs Noksel, 39 pcs Ilva21mm, 308 pcs Ilva25mm, 10pcs bends, 10pcs Tpipes "
+  issued_who: 
+  change_who: 
+Two:
   id: 1002
-  name: Brandov Railway Station
-  location: MyString
-  invicinity: Brandov
-  state_id: 1
-  district: 41156
-  note: MyText
-  issued_who: MyString
-  change_who: MyString
+  name: Malměřice-Veselka
+  location: +50° 7' 35.00", +13° 23' 28.06"
+  invicinity: Malměřice
+  state_id: 10
+  district: 
+  note: "406 pcs Noksel, 10pcs bends, 10pcs Tpipes "
+  issued_who: 
+  change_who: 
 
-three:
-  id: 1003
-  name: Brandov Depot1
-  location: Brandov
-  invicinity: MyString
-  state_id: 1
-  district: MyString
-  note: MyText
-  issued_who: MyString
-  change_who: MyString
+

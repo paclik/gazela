@@ -8,10 +8,4 @@ one:
   weight: 7500
   note: MyText
 
-two:
-  id: 10002
-  itemid: MyString
-  diameter: 1400
-  width: 25
-  weight: 7450
-  note: MyText
+
