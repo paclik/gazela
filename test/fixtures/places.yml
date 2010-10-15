@@ -8,7 +8,7 @@ one:
   invicinity: Pastuchovice
   state_id: 10
   district: 
-  note: "787 pcs Noksel, 39 pcs Ilva21mm, 308 pcs Ilva25mm, 10pcs bends, 10pcs Tpipes "
+  note: "787 pcs Noksel, 39 pcs Ilva21mm, 308 pcs Ilva25mm, 10pcs bends, 10pcs Tpipes; rst. Žihle"
   issued_who: 
   change_who: 
 Two:
@@ -18,8 +18,106 @@ Two:
   invicinity: Malměřice
   state_id: 10
   district: 
-  note: "406 pcs Noksel, 10pcs bends, 10pcs Tpipes "
+  note: "406 pcs Noksel, 10pcs bends, 10pcs Tpipes; rst. Vroutek "
   issued_who: 
   change_who: 
-
-
+Three:
+  id: 1003
+  name: Žihle rst.
+  location: 50.047717,13.363826
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "Railway Station"
+  issued_who: 
+  change_who: 
+Four:
+  id: 1004
+  name: Vroutek rst.
+  location: +50° 11' 5.97", +13° 22' 24.46"
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "Railway Station"
+  issued_who: 
+  change_who: 
+Five:
+  id: 1005
+  name: Uněšov
+  location: 49° 52' 30.93",  13° 9' 22.81"
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "500 pcs Noksel, 4pcs Ilva21mm, 57 pcs Ilva25mm, 10pcs bends, 10pcs Tpipes rst. Kaznějov "
+  issued_who: 
+  change_who: 
+six:
+  id: 1006
+  name: Těchlovice
+  location: +49° 46' 43.83", +12° 58' 12.59" 
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "919 pcs Noksel, 21pcs Ilva21mm, 121 pcs Ilva25mm, 10pcs bends, 10pcs Tpipes rst.Stříbro"
+  issued_who: 
+  change_who:   
+seven:
+  id: 1007
+  name: Holostřevy 
+  location: +49° 43' 6.37", +12° 51' 59.90" 
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "500 pcs Noksel, 10pcs bends, 10pcs Tpipes rst.Stříbro"
+  issued_who: 
+  change_who:  
+eight:
+  id: 1008
+  name: Stříbro rst.
+  location: +49° 44' 22.66", +12° 59' 56.53"
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "Railway Station"
+  issued_who: 
+  change_who:  
+nine:
+  id: 1009
+  name: Kaznějov - kaolinka
+  location: +49° 53' 23.79", +13° 21' 9.91"
+  invicinity: Kaznějov
+  state_id: 10
+  district: 
+  note: "Private Railway Station"
+  issued_who: 
+  change_who:
+ten:
+  id: 1010
+  name: Hora Sv.Kateřiny  
+  location: +50° 36' 10.91", +13° 26' 46.94"
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "427 pcs Noksel, 155 pcs Ilva25mm,10pcs bends, 10pcs Tpipes rst. Chomutov"
+  issued_who: 
+  change_who:    
+eleven:
+  id: 1011
+  name: Chomutov rst.
+  location: +50° 27' 15.11", +13° 23' 53.41"
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "Railway Station"
+  issued_who: 
+  change_who:   
+twelve:
+  id: 1012
+  name: Žatec rst.
+  location: +50° 20' 18.47", +13° 32' 23.94" 
+  invicinity: 
+  state_id: 10
+  district: 
+  note: "Railway Station"
+  issued_who: 
+  change_who:  

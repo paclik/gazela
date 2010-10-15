@@ -1,8 +1,8 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  id: 1
-  senderRequest: MyString
+  id: 1001
+  senderRequest: Turkey_czech_001
   loadPlace_id: 1
   unLoadPlace_id: 1
   vrn: MyString
@@ -13,8 +13,8 @@ one:
   change_who: MyString
 
 two:
-  id: 1
-  senderRequest: MyString
+  id: 1002
+  senderRequest: Chomutov_Brandov_001
   loadPlace_id: 1
   unLoadPlace_id: 1
   vrn: MyString
