@@ -75,4 +75,4 @@
 <% end %>
 
 <%= link_to 'Edit', edit_transport_path(@transport) %> |
-<%= link_to 'List', transports_path %>
+

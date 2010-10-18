@@ -12,7 +12,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :transports, 'Transports',transports_path  do |sub_nav|
  	  sub_nav.item :list, 'List', :controller => 'transports', :action => 'index'
  	 	sub_nav.item :new, 'New', new_transport_path
-    	
+   
     	                                                          
     end 
 

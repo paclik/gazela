@@ -28,12 +28,19 @@ class TransportsController < ApplicationController
   def show
     @transport = Transport.find(params[:id])
 
+    
+  
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @transport }
     end
   end
-
+  
+  def protocol
+    @transport = Transport.find(params[:id])
+    render :view=>'protocol'
+  end
+  
   # GET /transports/new
   # GET /transports/new.xml
   def new
@@ -77,7 +84,7 @@ class TransportsController < ApplicationController
   	Transport.transaction do
   		for i in 1..(params[:pieces].to_i) do
 					begin
-						@item = Item.create( :weight => params[:nettoWeight],:bruttoWeight => params[:bruttoWeight],
+						@item = Item.create( :weight => params[:nettoWeight],:length => params[:length],
 										:diameter => params[:diameter], :width => params[:width],:place_id => @transport.loadPlace_id, :itemid => params[:itemid])
 						@itemtransports = @transport.items << @item
 					  @wagon = @itemtransports.find(@item).wagons.find_by_transport_id(@transport)

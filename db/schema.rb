@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101011133137) do
+ActiveRecord::Schema.define(:version => 20101018215449) do
 
   create_table "items", :force => true do |t|
     t.string   "itemid"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20101011133137) do
     t.integer  "place_id"
     t.integer  "bruttoWeight", :limit => 10, :precision => 10, :scale => 0
     t.datetime "placeSince"
+    t.float    "length"
   end
 
   create_table "items_transports", :id => false, :force => true do |t|

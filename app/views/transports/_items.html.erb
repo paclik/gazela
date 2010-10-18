@@ -6,8 +6,8 @@
     <th>ItemSN</th>
     <th>Place</th>
     <th>Wagon</th>
-    <th>NttWeight</th>
-    <th>BrtWeight</th>
+    <th>Weight</th>
+    <th>Length</th>
     <th>MatWidth</th>
     
     <th>Note</th>
@@ -21,7 +21,7 @@
 				<td><%= link_to item.place.name, :controller => "items", :place_id => item.place_id  if item.place_id %></td>
 				<td><%=h item.wagons.find_by_transport_id(@transport).vrn %></td> 
 				<td><%=h item.weight	 %>  </td>
-				<td><%=h item.bruttoWeight	 %>  </td>
+				<td><%=h item.length	 %>  </td>
 				<td><%=h item.width	 %>  </td>
 	  		<td><%=h "note" if item.note and item.note != "" %></td>
 				

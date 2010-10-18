@@ -1,59 +1,44 @@
-<h1>Transport info</h1>
+<h3>Transport info</h3>
 <div class="showRecord">
 			
 			<p>
 				<b>Id:</b>
-				<%=h @transport.id %>
-			</p>
-			
-			<p>
+				<%=h @transport.id %>|
+		
 				<b>Senderrequest:</b>
 				<%=h @transport.senderRequest %>
-			</p>
-			
-			<p>
-				<b>Loadplace:</b>
-				<%= link_to @transport.loadPlace.name,  @transport.loadPlace  if @transport.loadPlace %>
-			</p>
-			
-			<p>
-				<b>Unloadplace:</b>
-				<%= link_to @transport.unLoadPlace.name,  @transport.unLoadPlace  if @transport.unLoadPlace %>
-			</p>
-			  <p>
-			 <%=link_to "Google directions", "http://maps.google.com/maps?saddr=#{@transport.loadPlace.location}&daddr=#{@transport.unLoadPlace.location}"  if   (@transport.unLoadPlace and @transport.loadPlace) %>
-			 </p>
-			 <p>
 				<b>Vrn:</b>
 				<%=h @transport.vrn %>
 			</p>
-
+			<HR/>
+			<p>
+				<b>Loadplace:</b>
+				<%= link_to @transport.loadPlace.name,  @transport.loadPlace  if @transport.loadPlace %>
 			
+				<b>Unloadplace:</b>
+				<%= link_to @transport.unLoadPlace.name,  @transport.unLoadPlace  if @transport.unLoadPlace %>
+			</p>
+			<HR/>
 			<p>
 				<b>Plan loadtime:</b>
 				<%=h @transport.loadTime.localtime.strftime("%d-%m-%y| ") %> <b>Effective:</b>
 				<%=@transport.effectiveLoadTime.localtime.strftime("%d-%m-%y|%H.%M") if @transport.effectiveLoadTime %>
-			</p>
 			
-			<p>
 				<b>Plan unloadtime:</b>
 				<%=h @transport.UnLoadTime.localtime.strftime("%d-%m-%y| ") %><b>Effective:</b>
 				<%=@transport.efectiveUnLoadTime.localtime.strftime("%d-%m-%y|%H.%M") if @transport.efectiveUnLoadTime%>
 			</p>
-			
+		
 			<p>
 				<b>Note:</b>
 				<%=h @transport.note %>
 			</p>
-
+				<HR/>
 		
 	
 </div>
 
-<%= link_to 'Edit', edit_transport_path(@transport) %> |
-		<%= link_to 'New wagon',  :controller => "transports", :action => 'new_wagon' , :id => @transport %> |
-		<%= link_to 'List', transports_path %>|
-		<%= link_to 'Protocol', :controller => "transports", :action => 'protocol' , :id => @transport %>
+
 <div class="showRecord">		
 		<% if not  @transport.items.empty? then%> 
 			<%= render :partial => 'items' %>

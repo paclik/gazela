@@ -1,6 +1,6 @@
 <h3>Listing items</h3>
-
-<table>
+	
+<table  id="customers">
   <tr>
     <th>Id</th>
     <th>ItemSN</th>
@@ -12,9 +12,10 @@
     
     <th>Note</th>
   </tr>
-
 <% @transport.items.each do |item| %>
-		 <tr>
+ 				<% if  @highlight == "alt" then @highlight = '' else  @highlight = 'alt' end  %>
+ 				
+ 				<tr class = '<%= @highlight%>'>
 				<td><%= link_to item.id, item  %></td>
 				<td><%=h item.itemid %></td>
 				<td><%= link_to item.place.name, :controller => "items", :place_id => item.place_id  if item.place_id %></td>
@@ -29,5 +30,5 @@
 <% end %>
 
 </table>
-
+	
 <br />
