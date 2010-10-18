@@ -32,8 +32,8 @@
 					<%= f.text_field :weight %>
 				</p>
 				<p>
-					<%= f.label :length_in_m%><br />
-					<%= f.text_field :length %>
+					<%= f.label :length_in_m %><br />
+					<%= f.text_field :length if @item.length%>
 				</p>
 				<p>
 					<%= f.label :note %><br />
