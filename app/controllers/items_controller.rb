@@ -64,7 +64,7 @@ class ItemsController < ApplicationController
     end	
     #@transports = Transport.find(:all,:conditions => "effectiveLoadTime IS NULL and efectiveUnloadTime IS NULL #{@cond1} ")
     @transports = Transport.find(:all,:conditions => "effectiveLoadTime IS NULL and efectiveUnloadTime IS NULL")
- 
+    if @item.wagons.find(:last) then @wagon_vrn = @item.wagons.find(:last).vrn end
   end
 
   # POST /items

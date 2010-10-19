@@ -55,10 +55,11 @@
 			<%	if  not @transports.empty? %>
 					<p>
 							<b>load on Wagon with reg. number </b><br />
-							<%= text_field "",:wagon_vrn,  :size => 20%>
+							<%= text_field "", :wagon_vrn,  :size => 20, :value=>@wagon_vrn %>
+				
 						</p> 
 					<p>
-		
+		      
 					<b>and link this Item to transport</b><br />
 					<%= collection_select "" ,:transport, @transports , :id, :senderRequest,{:include_blank => true}  %> 
 			<%	else %>
