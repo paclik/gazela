@@ -12,7 +12,7 @@
 
 <p>
   <b>Location:</b>
-  <%=link_to "Google map", "http://maps.google.com/maps?&q="+@place.location %>
+  <%=link_to "Google map", "http://maps.google.com/maps?&q="+@place.location if @place.location%>
  
 </p>
 <p>

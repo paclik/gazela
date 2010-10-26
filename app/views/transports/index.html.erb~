@@ -38,5 +38,5 @@
 	<%= will_paginate @transports , :previous_label=> "Předchozí", :next_label=> "Další"%> 
 	<br />
 	
-	<%= link_to 'New transport', new_transport_path %>
+
 </div>

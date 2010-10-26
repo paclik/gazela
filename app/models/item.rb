@@ -5,7 +5,7 @@ class Item < ActiveRecord::Base
  
   ######### pagination promenne	
   cattr_reader :per_page
-  @@per_page = 20
+  @@per_page = 50
   ######################
   
   protected 

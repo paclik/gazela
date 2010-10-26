@@ -31,13 +31,13 @@
 			
 			<p>
 				<b>Plan loadtime:</b>
-				<%=h @transport.loadTime.localtime.strftime("%d-%m-%y| ") %> <b>Effective:</b>
+				<%=h @transport.loadTime.localtime.strftime("%d-%m-%y| ")  if @transport.loadTime %> <b>Effective:</b>
 				<%=@transport.effectiveLoadTime.localtime.strftime("%d-%m-%y|%H.%M") if @transport.effectiveLoadTime %>
 			</p>
 			
 			<p>
 				<b>Plan unloadtime:</b>
-				<%=h @transport.UnLoadTime.localtime.strftime("%d-%m-%y| ") %><b>Effective:</b>
+				<%=h @transport.UnLoadTime.localtime.strftime("%d-%m-%y| ") if @transport.UnLoadTime %><b>Effective:</b>
 				<%=@transport.efectiveUnLoadTime.localtime.strftime("%d-%m-%y|%H.%M") if @transport.efectiveUnLoadTime%>
 			</p>
 			

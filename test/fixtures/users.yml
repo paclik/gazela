@@ -5,3 +5,9 @@ one:
    crypted_password: edbf7959b44c2961e096d29ee8427fe3851e112b536fcffea55781829b57edab994c562083460ada235e619a0e6bdabd4c28ec9bc57670837b65f29483bf2bb8
    password_salt:    gf3W5b8_LTwDiibBH-MG
    admin: true
+   
+two:
+   email: novak@cargonet.cz
+   crypted_password: a1da0b24bfb94c49140acc7a634660e4c8d0a486481fb80bc1f0af2397f906b78219bd1e8fcb626b8e8c6519ec502f6f00ddfbbd4690a12c785d74069e186cf4
+   password_salt:    fSgbLFT6OOgnsElZdWzm
+   admin: true   

@@ -5,7 +5,7 @@ SimpleNavigation::Configuration.run do |navigation|
  	 primary.item :items, 'Items',items_path  do |sub_nav|
  	 	 sub_nav.item :list, 'List', items_path 
      sub_nav.item :new, 'New', new_item_path
-    	#sub_nav.item :new, 'Statistika',:controller => 'items', :action => 'statistic'
+     sub_nav.item :upload, 'Upload', uploadfile_item_path
     	
     end 
     

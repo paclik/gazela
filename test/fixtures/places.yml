@@ -121,3 +121,33 @@ twelve:
   note: "Railway Station"
   issued_who: 
   change_who:  
+therteen:
+  id: 1013
+  name: Halkali rst.
+  location: +41° 1' 7.80", +28° 46' 0.24"
+  invicinity: Istanbul
+  state_id: 50
+  district: 
+  note: "Railway Station"
+  issued_who: 
+  change_who:  
+fourteen:
+  id: 1014
+  name: Arifiye rst.
+  location: +40° 42' 47.86", +30° 21' 20.42" 
+  invicinity: Adapazari
+  state_id: 50
+  district: 
+  note: "Railway Station"
+  issued_who: 
+  change_who:    
+fifteen:
+  id: 1015
+  name: Pardubice rst.
+  location: +50° 1' 53.86", +15° 45' 34.33" 
+  invicinity:
+  state_id: 10
+  district: 
+  note: "Railway Station"
+  issued_who: 
+  change_who:     

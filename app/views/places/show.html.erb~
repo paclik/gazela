@@ -41,4 +41,3 @@
 </div>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'List', places_path %>

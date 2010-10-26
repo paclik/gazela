@@ -1,0 +1,15 @@
+<p class="stress_blink">Upload csv file:</p>
+<p>In CSV file must be fields with these names and fields are separated by semicolumn ";": Coil no.;AMB no.;SAP Order;ATL order;Mill;customer;
+customer ref;Part no.;steel grade;thickness;width;gross weight;netweight</p>
+<%= error_messages_for 'item' %>
+
+<h1>File Upload</h1>
+		<% form_tag ({:action => 'savefile'}, 
+                        :multipart => true) do %>
+			<p><label for="save_file">Select File</label> : 
+			<%= file_field 'upload', 'datafile' %></p>
+			<%= submit_tag "Upload" %>
+		<% end %>
+  
+
+<%= link_to 'List', :action => 'index' %>

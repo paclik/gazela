@@ -26,8 +26,8 @@
 			<td><%=h transport.loadPlace.name if transport.loadPlace%></td>
 			<td><%=h transport.unLoadPlace.name if transport.unLoadPlace%></td>
 			<td><%=h transport.vrn %></td>
-			<td><%=h transport.loadTime.localtime.strftime("%d-%m-%y|") %></td>
-			<td><%=h transport.UnLoadTime.localtime.strftime("%d-%m-%y|%H.%M") %></td>
+			<td><%=h transport.loadTime.localtime.strftime("%d-%m-%y|") if transport.loadTime %></td>
+			<td><%=h transport.UnLoadTime.localtime.strftime("%d-%m-%y|%H.%M") if transport.UnLoadTime%></td>
 			<td><%=h transport.effectiveLoadTime.localtime.strftime("%d-%m-%y|") if transport.effectiveLoadTime %></td>
 			<td><%=h transport.efectiveUnLoadTime.localtime.strftime("%d-%m-%y|") if transport.efectiveUnLoadTime %></td>
 			<td><%=h "note" if transport.note and transport.note != "" %></td>

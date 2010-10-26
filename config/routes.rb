@@ -47,6 +47,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "items", :action => 'index', :par_date => Date.today.strftime("%d.%m.%Y") 
   map.login 'login', :controller => 'user_sessions', :action => 'new'  
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'  
+  map.uploadfile_item "/uploadfile/", :controller => "items", :action => "uploadfile"
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.

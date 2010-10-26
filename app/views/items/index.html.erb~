@@ -68,8 +68,8 @@
 			<% end %>
 		<% end %>
 	</table>
-	
+	<%= will_paginate @items , :previous_label=> "Předchozí", :next_label=> "Další"%> 
 	<br />
 	
-	<%= link_to 'New item', new_item_path %>
+	
 </div>	
