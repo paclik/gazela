@@ -1,15 +1,13 @@
-set :application, "amelem"
-#set :repository, "cesta_k_vasemu_repositari"
-#set :repository, "ssh://totalplan@server3.railshosting.cz/usr/home/totalplan/git/totalplan.git"
-set :repository, "git://github.com/paclik/gazela.git" 
+set :application, "gazelasituace"
+set :repository, "git://githost.cz/gazelasituace/gazela.git"
 set :scm, "git"
 
-role :web, "server3.railshosting.cz"
-role :app, "server3.railshosting.cz"
-role :db,  "server3.railshosting.cz", :primary => true
+role :web, "server7.railshosting.cz"
+role :app, "server7.railshosting.cz"
+role :db,  "server7.railshosting.cz", :primary => true
 
-set :deploy_to, "/home/amelem/app/"
-set :user, "amelem"
+set :deploy_to, "/home/gazelasituace/app/"
+set :user, "gazelasituace"
 
 set :use_sudo, false
 
@@ -29,4 +27,3 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 end
-

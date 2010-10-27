@@ -42,6 +42,7 @@ def savefile
 				 	 	 :loadTime => DateTime.strptime(row["Loading date"],'%d.%m.%Y'), :effectiveLoadTime => DateTime.strptime(row["Departure Date"],'%d.%m.%Y'),
 				 	 	 :UnLoadTime => DateTime.strptime(row["Pardubice rst."],'%d.%m.%Y') )
 			 	 end
+			 	 
 				 i=Item.new	
 				 i.transports << @transportid
 				 i.wagons.find_by_transport_id(@transportid).update_attributes(:vrn => row["Equipment No"], :wag_type => "train")

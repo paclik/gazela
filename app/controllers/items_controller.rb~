@@ -36,11 +36,15 @@ def savefile
 				 if Transport.find(:first, :conditions => [ "vrn= ?", row["Train No"]])  then
 				 	 @transportid = Transport.find(:first, :conditions => [ "vrn= ?", row["Train No"]])
 				 else
-				 	 @transportid = Transport.create(:vrn => "debil")	 
+				 	 @transportid = Transport.create(:vrn =>  row["Train No"], :loadPlace_id => Place.find_or_create_by_name(:name => row["Loading Location"]).id ,
+				 	 	 :senderRequest =>  row["Loading Location"] +"-"+ row["Destination"] +"-"+ row["Train No"],
+				 	 	 :unLoadPlace_id => Place.find_or_create_by_name(:name => row["Destination"]).id, 
+				 	 	 :loadTime => DateTime.strptime(row["Loading date"],'%d.%m.%Y'), :effectiveLoadTime => DateTime.strptime(row["Departure Date"],'%d.%m.%Y'),
+				 	 	 :UnLoadTime => DateTime.strptime(row["Pardubice rst."],'%d.%m.%Y') )
 			 	 end
 				 i=Item.new	
 				 i.transports << @transportid
-				 i.wagons.find_by_transport_id(@transportid).update_attributes(:vrn=>"wagon999")
+				 i.wagons.find_by_transport_id(@transportid).update_attributes(:vrn => row["Equipment No"], :wag_type => "train")
 				 i.itemid = row["Pipe No & Group No"]
 				 #i.amb = row["Equipment No"]
 				 #i.sap = row["SAP Order"]

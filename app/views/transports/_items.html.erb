@@ -2,7 +2,8 @@
 	
 <table  id="customers">
   <tr>
-    <th>Id</th>
+    <th></th> 
+  	<th>Id</th>
     <th>ItemSN</th>
     <th>Place</th>
     <th>Wagon</th>
@@ -12,11 +13,16 @@
     
     <th>Note</th>
   </tr>
-<% @transport.items.each do |item| %>
+  <% ####   i = row counter %> 
+  <%i=0%>
+  <% form_tag :controller => 'talks', :action => 'select_many' do %> 
+  <% @transport.items.each do |item| %>
  				<% if  @highlight == "alt" then @highlight = '' else  @highlight = 'alt' end  %>
  				
  				<tr class = '<%= @highlight%>'>
-				<td><%= link_to item.id, item  %></td>
+ 				<%i=i+1%>
+				<td><%= check_box_tag 'item['+i.to_s+']', item  %>	</td>
+ 				<td><%= link_to item.id, item  %></td>
 				<td><%=h item.itemid %></td>
 				<td><%= link_to item.place.name, :controller => "items", :place_id => item.place_id  if item.place_id %></td>
 				<td><%=h item.wagons.find_by_transport_id(@transport).vrn %></td> 
@@ -27,7 +33,12 @@
 				
 						
 			</tr>
-<% end %>
+			
+			<% end %>
+			<tr><td colspan=9 ><input type="checkbox" name="checkall" onclick="checkUncheckAll(this);"/>Vše --  a s označenýmy kontakty proveď jednu z následujících operací
+				</td>
+			</tr>	
+			<% end %>
 
 </table>
 	
