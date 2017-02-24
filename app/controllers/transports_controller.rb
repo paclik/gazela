@@ -11,7 +11,6 @@ class TransportsController < ApplicationController
 
   end
 	
-	
 	# GET /transports
   # GET /transports.xml
   def index
