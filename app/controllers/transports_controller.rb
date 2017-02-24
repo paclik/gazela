@@ -119,6 +119,7 @@ class TransportsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(transports_url) }
       format.xml  { head :ok }
+      
     end
   end
 end
